@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Scroll Animation Example</title>
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.scroll-container {
+  display: flex;
+  height: 100vh;  overflow-x: hidden; 
+
+}
+
+.section {
+  flex: 0 0 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.vertical-section{
+  flex: 0 0 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+/* .section:nth-child(1) { background-color: #ff595e; } */
+.section:nth-child(3) { background-color: #8ac926; }
+.section:nth-child(4) { background-color: #1982c4; }
+
+  </style>
+</head>
+<body>
+
+
+  <header class="navigation">
+    <div class="logo">
+      <a href="/">
+        <img src="assets/logo.svg" alt="Site Logo">
+      </a>
+    </div>
+
+    <nav>
+
+      <ul class="nav-socials">
+        <li><a target="_blank" href="/fb">
+            <div class="nav-fb"></div>
+
+          </a></li>
+        <li><a target="_blank" href="/insta">
+
+            <div class="nav-insta"></div>
+
+          </a></li>
+        <li><a target="_blank" href="/youtube">
+            <div class="nav-yt"></div>
+
+
+          </a></li>
+        <li><a target="_blank" href="/tiktok">
+            <div class="nav-tiktok"></div>
+
+
+          </a></li>
+        <li><a target="_blank" href="/linkedin">
+            <div class="nav-linkedin"></div>
+
+
+          </a></li>
+        <li class="nav-lang">
+          <a href="">
+            GEO
+          </a>
+          <a href="">
+            RU
+          </a>
+          <a href="">
+            EN
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="templates/projects.html">პროექტები</a></li>
+        <li><a href="/about">შესახებ</a></li>
+        <li><a href="/services">ბლოგი</a></li>
+        <li><a href="/contact">სიახლეები</a></li>
+        <li><a href="/contact">კონტაქტი</a></li>
+        <li class="nav-phone"> <img src="assets/phone.svg" alt=""><a href="tel:+995596602602">+995 596 60 26 02</a>
+        </li>
+      </ul>
+    </nav>
+
+
+  </header>
+  
+  <div class="scroll-container">
+    <section class="section hero">
+      <aside class="side-nav">
+        <span>
+  
+          მთავარი
+        </span>
+      </aside>
+  
+  
+      <div class="owl-carousel owl-theme carousel-container" id="hero-carousel">
+        <div class="item carousel-item">
+          <img src="assets/building.jpg" alt="">
+          <div class="carousel-item-content">
+            <header>
+              <h1>
+                ლა ბათუმი ფამილია
+                ახალ ბულვართან
+              </h1>
+              <a href="">პროექტის ნახვა</a>
+            </header>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <img src="assets/building.jpg" alt="">
+          <div class="carousel-item-content">
+            <header>
+              <h1>
+                ლა ბათუმი ფამილია
+                ახალ ბულვართან
+              </h1>
+              <a href="">პროექტის ნახვა</a>
+            </header>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <img src="assets/building.jpg" alt="">
+          <div class="carousel-item-content">
+            <header>
+              <h1>
+                ლა ბათუმი ფამილია
+                ახალ ბულვართან
+              </h1>
+              <a href="">პროექტის ნახვა</a>
+            </header>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <img src="assets/building.jpg" alt="">
+          <div class="carousel-item-content">
+            <header>
+              <h1>
+                ლა ბათუმი ფამილია
+                ახალ ბულვართან
+              </h1>
+              <a href="">პროექტის ნახვა</a>
+            </header>
+          </div>
+        </div>
+       
+  
+      </div>
+      <div class="custom-nav">
+        <img src="assets/leftarrow.svg" class="custom-prev" />
+        <span class="dot" data-dot="0"></span>
+        <span class="dot" data-dot="1"></span>
+        <span class="dot" data-dot="2"></span>
+        <span class="dot" data-dot="3"></span>
+        <img src="assets/rightArrow.svg"  class="custom-next" />
+        <img id="scrolldown" src="assets/scroll-down.png" alt="" srcset="">
+      </div>
+      
+    </section>
+    <section class="section projects">
+      <div class="projects-grid"> </div>
+
+      <div class="side-nav">
+          
+        <span>პროქტები</span>
+      </div>
+      <main>
+        <a href="" class="project">
+          <div class="project-top">
+            <img src="../assets/project.jpg" alt="">
+          </div>
+          <div class="project-bottom">
+            <div class="project-name">
+              <header>
+                <h2>02 / სათაური</h2>
+                <h3>ლა ბათუმი ფამილია</h3>
+  
+              </header>
+              <img src="../assets/detailsArrow.svg" alt="">
+  
+            </div>
+  
+            <ul class="project-content">
+              <li>ლოკაცია: ახალი ბულვარი, ბათუმი
+              </li>
+              <li>ფასი: 27 000$-დან
+  
+              </li>
+              <li>დასრულება: 2024
+  
+              </li>
+  
+            </ul>
+            
+  
+          </div>
+  
+        </a>
+        <a href="" class="project">
+          <div class="project-top">
+            <img src="../assets/project.jpg" alt="">
+          </div>
+          <div class="project-bottom">
+            <div class="project-name">
+              <header>
+                <h2>02 / სათაური</h2>
+                <h3>ლა ბათუმი ფამილია</h3>
+  
+              </header>
+              <img src="../assets/detailsArrow.svg" alt="">
+  
+            </div>
+            <ul class="project-content">
+              <li>ლოკაცია: ახალი ბულვარი, ბათუმი
+              </li>
+              <li>ფასი: 27 000$-დან
+  
+              </li>
+              <li>დასრულება: 2024
+  
+              </li>
+  
+            </ul>
+  
+          </div>
+  
+        </a>
+      </main>
+
+    </section>
+  
+    
+   
+  
+  </div>
+  <section class="vertical-section news" style="background-color: #ffca3a;">
+    <div class="side-nav">
+      <span> სიახლეები</span>
+    </div>
+    <main>
+      <a href="" class="news-box">
+        <div class="news-top">
+          <img src="assets/newspaper.jpg" alt="">
+        </div>
+        <div class="news-bottom">
+
+          <header>
+            <h3>
+              შემთხვევითად გენერირებული ტექსტი
+            </h3>
+            <p class="news-text">შემთხვევითად გენერირებული ტექსტი ეხმარება დიზაინერებს და ტიპოგრაფიული ნაწარმის
+              შემქმნელებს, რეალურთან
+              მაქსიმალურად მიახლოებული შაბლონი წარუდგინონ შემფასებელს. ხშირადაა შემთხვევა, როდესაც დიზაინის შესრულებისას
+              საჩვენებელია, თუ როგორი იქნება ტექსტის ბლოკი. სწორედ ასეთ დროს არის მოსახერხებელი ამ გენერატორით შექმნილი
+            </p>
+          </header>
+          <div class="news-box-more">
+            <span>სრულად ნახვა</span>
+            <img src="assets/seemorewhite.svg" alt="">
+          </div>
+        </div>
+      </a>
+      <a href="" class="news-box reverse  ">
+        <div class="news-bottom reverse ">
+
+          <header class="reverse">
+            <h3>
+              შემთხვევითად გენერირებული ტექსტი
+            </h3>
+            <p class="news-text">შემთხვევითად გენერირებული ტექსტი ეხმარება დიზაინერებს და ტიპოგრაფიული ნაწარმის შემქმნელებს, რეალურთან
+              მაქსიმალურად მიახლოებული შაბლონი წარუდგინონ შემფასებელს. ხშირადაა შემთხვევა, როდესაც დიზაინის შესრულებისას
+              საჩვენებელია, თუ როგორი იქნება ტექსტის ბლოკი. სწორედ ასეთ დროს არის მოსახერხებელი ამ გენერატორით შექმნილი
+            </p>
+          </header>
+          <div class="news-box-more">
+            <span>სრულად ნახვა</span>
+            <img src="assets/seemorewhite.svg" alt="">
+          </div>
+        </div>
+        <div class="news-top">
+          <img src="assets/newspaper.jpg" alt="">
+        </div>
+
+      </a>
+    </main>
+  </section>
+  <section class="vertical-section contacts" style="background-color: white;">
+    <div class="projects-grid"> </div>
+
+    <div class="side-nav">
+      <span>
+        კონტაქტი
+      </span>
+
+    </div>
+    <main>
+
+      <div class="contacts-top">
+        <iframe class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d870.2285039777593!2d41.5978999235003!3d41.623339194360746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4067852da4bfbcb3%3A0x4fcbdd729bda6ee4!2sCasa%20Di%20Batumi!5e0!3m2!1sen!2sge!4v1729077626100!5m2!1sen!2sge"
+          width="80%" height="700" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <form action="a">
+          <header>
+            <h2>მოითხოვე ზარი</h2>
+          </header>
+          <input type="text" placeholder="სახელი">
+          <div class="phone-input">
+            <select name="cCode" id="country-code">
+              <option value="+995">+995</option>
+              <option value="+777">+777</option>
+            </select>
+            <input type="number" name="phone-number" id="phone-number" placeholder="ტელეფონის ნომერი">
+          </div>
+          <input type="email" placeholder="მეილი">
+          <button type="submit">გაგზავნე</button>
+
+        </form>
+      </div>
+      <div class="contacts-bottom">
+        <ul class="nav-links contact-info">
+          <li>გაყიდვების ოფისი: <a href="" target="_blank"> გრიგოლ ელიავას ქ. 36, ბათუმი</a>
+          </li>
+          <li>ტელეფონი: <a href="tel:+995596602602"> +995 596 60 26 02</a>
+          </li>
+          <li>ელ-ფოსტა: <a href="mailto:sales@renaisuncity.ge">sales@renaisuncity.ge</a>
+          </li>
+        </ul>
+        <div class="contact-links">
+
+
+          <div class="yellow-bg">
+            <div class="fb">
+            </div>
+          </div>
+          <div class="yellow-bg">
+            <div class="insta">
+            </div>
+          </div>
+          <div class="yellow-bg">
+            <div class="youtube">
+            </div>
+          </div>
+          <div class="yellow-bg">
+            <div class="tiktok">
+            </div>
+          </div>
+          <div class="yellow-bg">
+            <div class="linkedin">
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </main>
+    
+  </section>
+  <div class="copyright">
+    <p>ყველა უფლება დაცულია ©2024</p>
+   <a href="https://shindi.ge/" target="_blank"><img src="assets/shindi.png" alt=""></a> 
+  </div>
+ 
+  <!-- <section class="vertical-section" style="background-color: #8ac926;">Section 7</section>
+  <section class="vertical-section" style="background-color: #1982c4;">Section 8</section> -->
+
+
+
+  <!-- GSAP Scripts -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script> <!-- jQuery Library -->
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const horizontalSections = document.querySelectorAll('.section');
+    gsap.to(horizontalSections,{
+      xPercent:-100 *(horizontalSections.length-1 ) ,
+      ease:'none',
+      scrollTrigger:{
+        trigger:".scroll-container",
+        pin:true,
+        scrub:1,
+        snap:1/(horizontalSections.length - 1),
+        // end:()=>"+=" + document.querySelector(".scroll-container").offsetWidth
+      }
+    }
+
+    )
+
+    const verticalSections = document.querySelectorAll('.vertical-section')
+
+    verticalSections.forEach((section,idx)=>{
+      ScrollTrigger.create({
+        trigger:section,
+        start:"top top",
+        scrub:3,
+        // snap:1/(verticalSections.length - 1),
+
+        pin:true,
+        pinSpacing:false,
+      })
+    })
+
+    
+
+
+  
+  </script>
+</body>
+</html>
